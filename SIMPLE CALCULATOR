@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main() 
+{
+    double num1, num2, result;
+    printf("Enter two numbers for operation\n ");
+    scanf("%lf,%lf", &num1, &num2);
+    char symbols;
+    printf("select the operator that you want (+,-,*,/)\n");
+    scanf(" %c",&symbols);
+    if (symbols== '+') 
+    {
+        result=num1 + num2;
+        printf("%lf", result);
+    }
+    else if (symbols== '-')
+    {
+        result = num1 - num2;
+        printf("%lf", result);
+    }
+    else if (symbols== '*')
+    {
+        result = num1 * num2;
+        printf("%lf", result);
+    }
+    else if (symbols== '/')
+    {
+        if (num2 ==0) 
+        {
+        printf("you entered invalid number\n");
+        }
+        result = num1 / num2;
+        printf("%lf",result);
+    }
+    else
+    {
+        printf("You entered a invalid operator\n");
+    }
+}
