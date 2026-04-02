@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main ()
+{
+    int n, digit, min;
+    printf("Enter your number\n");
+    scanf("%d",&n);
+    int number=n;
+    while(n>0)
+    {
+        digit = n % 10;
+        if(digit < min)
+        {
+            min=digit;
+        }
+        n = n/10;
+    }
+    printf("The smallest digit of number %d is\n%d",number, min);
+}
