@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("*** COFFEE VENDING MACHINE ***\n");
+    int choice = 0;
+    printf("1. COFFEE\n");
+    printf("2. TEA\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+//-----------------------------------------------------------------------------------------------
+
+    switch(choice)
+    {
+        case 1:
+        int coffeeChoice = 0;
+        printf("\nYOU CHOSE COFFEE!\n");
+        printf("1. BLACK COFFEE\n");
+        printf("2. NORMAL COFFEE\n");
+        printf("Enter your coffee choice: ");
+        scanf("%d", &coffeeChoice);
+        if(coffeeChoice == 1)
+        {
+            printf("\nYOUR BLACK COFFEE IS DISPERSING IN THE OUTLET PLEASE COLLECT IT\n");
+        }
+        else if(coffeeChoice == 2)
+        {
+            printf("YOUR NORMAL COFFEE IS DIPERSING IN THE OUTLET PLEASE COLLECT IT \n");
+        }
+        else
+        {
+            printf("\nINVALID COFFEE OPTION!, PLEASE! ENTER A OPTION BETWEEN 1 AND 2 \n");
+        }
+        break;
+
+/*-------------------------------------------------------------------------------------------------*/
+
+        case 2:
+        int sugarQuantity = 0;
+        printf("\n YOU CHOSE A TEA!\n");
+        printf("1. ONE TSP SUGAR\n");
+        printf("2. TWO TSP SUGAR\n");
+        printf("3. SUGARLESS TEA\n");
+        printf("ENTER SUGAR QUANTITY THAT YOU WANT: ");
+        scanf("%d", &sugarQuantity);
+        if(sugarQuantity == 1)
+        {
+            printf("\nYOUR TEA IS DISPERSING IN THE OUTLET WITH ONE TSP SUGAR PLEASE COLLECT IT\n");
+        }
+        else if(sugarQuantity == 2)
+        {
+            printf("YOUR TEA IS DISPERSING IN THE OUTLET WITH TWO TSP SUGAR PLEASE COLLECT IT\n");
+        }
+        else if(sugarQuantity == 3)
+        {
+            printf("YOUR SUGARLESS TEA IS DISPERSING IN THE OUTLET PLEASE COLLECT IT\n");
+        }
+        else
+        {
+            printf("\nINVALID SUGAR QUANTITY!, PLEASE! ENTER A OPTION 1, 2 OR 3\n");
+        }
+        break;
+
+/*------------------------------------------------------------------------------------------------*/
+
+        default:
+        printf("\nINVALID OPTION!, PLEASE! ENTER THE CORRECT OPTION 1 OR 2 TO GET COFFEE OR TEA\n");
+
+    }
+
+//---------------------------------------------------------------------------------------------------
+
+    printf("\n*** THANK YOU ***");
+return 0;
+
+}
